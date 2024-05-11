@@ -64,7 +64,7 @@ const CardInfosBooks = ({
                 />
               </div>
               <p className="text-xs text-zinc-400">
-                {fullInfos[1].length > 250
+                {fullInfos[1]?.length > 250
                   ? `${fullInfos[1].substring(0, 250)}...`
                   : fullInfos[1]}
               </p>

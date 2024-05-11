@@ -5,7 +5,7 @@ import CardInfosBooks from "@/components/CardInfosBooks";
 
 export default async function Home() {
 
-  const data = await loadApiGoogleBooks("Livros recomendados + populares", 12)
+  const data = await loadApiGoogleBooks("Livros recomendados + populares", 40)
   const booksRecomendados = data.items
 
   return (
