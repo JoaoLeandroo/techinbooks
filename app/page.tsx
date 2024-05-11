@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Container from "@/components/Container";
+import { loadApiGoogleBooks } from "./api/service";
 
-export default function Home() {
+export default async function Home() {
+
+  const data = await loadApiGoogleBooks("Recomendados")
+  const data2 = data.items
+  console.log(data2)
+
   return (
     <Container>
       
@@ -30,6 +36,16 @@ export default function Home() {
           <div className="border-b border-zinc-400">
             <h1 className="text-2xl font-semibold drop-shadow text-zinc-700 capitalize">Livros recomendados</h1>
           </div>
+
+          <div>
+          {data2.map((todo: any) => (
+            <div key={todo.id} className="mt-5">
+              <span>{todo.volumeInfo.title}</span>
+              <hr />
+            </div>
+          ))}
+          </div>
+          
         </section>
 
         <section>
