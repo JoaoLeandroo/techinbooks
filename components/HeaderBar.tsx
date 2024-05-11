@@ -5,8 +5,10 @@ import Link from "next/link";
 import ButtonCategories from "./ButtonCategories";
 
 const HeaderBar = () => {
+
+
   return (
-    <div className="border-b border-zinc-400 bg-zinc-200 shadow-lg">
+    <div className="border-b border-zinc-400 bg-zinc-200 shadow-lg sticky top-0 z-50">
       <Container>
         <header className="h-16 w-full flex justify-between items-center">
           <div>
@@ -16,10 +18,10 @@ const HeaderBar = () => {
           <div className="relative">
             <Input
               className="md:w-[600px] sm:w-[450px] w-[250px] bg-slate-300"
-              placeholder="Procure aqui"
+              placeholder="Procure aqui..."
             />
-            <Link href={"/"}>
-              <Search size={20} className="absolute top-2 right-2 cursor-pointer transition duration-200 hover:scale-110" />
+            <Link href={"/categories"}>
+              <Search size={20} className="absolute top-2 right-2 cursor-pointer transition duration-200 hover:scale-110"/>
             </Link>
           </div>
 

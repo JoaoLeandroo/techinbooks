@@ -19,11 +19,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={font.className}>
-        <div className="min-h-screen flex flex-col">
-          <HeaderBar/>
-          <main className="flex-grow">{children}</main>
-          <FooterBar/>
-        </div>
+          <div className="min-h-screen flex flex-col">
+            <HeaderBar/>
+            <main className="flex-grow">{children}</main>
+            <FooterBar/>
+          </div>
       </body>
     </html>
   );

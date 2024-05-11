@@ -2,8 +2,8 @@ import { loadApiGoogleBooks } from "@/app/api/service";
 import CardInfosBooks from "@/components/CardInfosBooks";
 import Container from "@/components/Container";
 
-const ClassicPage = async () => {
-  const data = await loadApiGoogleBooks("Livros Classicos", 40);
+const ActionPage = async () => {
+  const data = await loadApiGoogleBooks("Ação", 40);
   const books = data.items;
 
   return (
@@ -12,7 +12,7 @@ const ClassicPage = async () => {
         <section className="mt-10 border-b border-zinc-400">
           <div className="border-b border-zinc-400">
             <h1 className="text-2xl font-semibold drop-shadow text-zinc-700 capitalize">
-              Livros Classicos
+              Livros de Ação
             </h1>
           </div>
 
@@ -52,4 +52,4 @@ const ClassicPage = async () => {
   );
 };
 
-export default ClassicPage;
+export default ActionPage;

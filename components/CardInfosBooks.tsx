@@ -57,7 +57,7 @@ const CardInfosBooks = ({
               <div className="w-full flex justify-center mb-1">
                 <Image
                   src={urlBook}
-                  width={120}
+                  width={100}
                   height={0}
                   alt={altBook}
                   className="object-contain rounded-lg shadow-xl"
