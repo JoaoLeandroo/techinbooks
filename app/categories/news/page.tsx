@@ -22,7 +22,7 @@ const NewsPage = async () => {
                 key={todo.id}
                 altBook={todo.volumeInfo.title}
                 titleBook={
-                  todo.volumeInfo.title.length > 20
+                  todo.volumeInfo.title?.length > 20
                     ? `${todo.volumeInfo.title.substring(0, 20)}...`
                     : todo.volumeInfo.title
                 }

@@ -42,7 +42,7 @@ export default async function Home() {
             <CardInfosBooks
               key={todo.id}
               altBook={todo.volumeInfo.title}
-              titleBook={todo.volumeInfo.title.length > 20 ? `${todo.volumeInfo.title.substring(0, 20)}...` : todo.volumeInfo.title}
+              titleBook={todo.volumeInfo.title?.length > 20 ? `${todo.volumeInfo.title.substring(0, 20)}...` : todo.volumeInfo.title}
               descripBook={todo.volumeInfo.description?.length > 35 ? `${todo.volumeInfo.description.substring(0, 35)}...` : `Acesse o card para mais informações...`}
               urlBook={todo.volumeInfo.imageLinks?.smallThumbnail === undefined ? todo.volumeInfo.imageLinks?.thumbnail : todo.volumeInfo.imageLinks?.smallThumbnail}
               authorBook={todo.volumeInfo.authors?.length > 1 ? todo.volumeInfo.authors[0] : todo.volumeInfo.authors}
