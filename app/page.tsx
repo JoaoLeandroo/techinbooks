@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Container from "@/components/Container";
 import { loadApiGoogleBooks } from "./api/service";
+import CardInfosBooks from "@/components/CardInfosBooks";
 
 export default async function Home() {
 
-  const data = await loadApiGoogleBooks("Recomendados")
-  const data2 = data.items
-  console.log(data2)
+  const data = await loadApiGoogleBooks("Livros recomendados + populares", 12)
+  const booksRecomendados = data.items
 
   return (
     <Container>
@@ -37,20 +37,20 @@ export default async function Home() {
             <h1 className="text-2xl font-semibold drop-shadow text-zinc-700 capitalize">Livros recomendados</h1>
           </div>
 
-          <div>
-          {data2.map((todo: any) => (
-            <div key={todo.id} className="mt-5">
-              <span>{todo.volumeInfo.title}</span>
-              <hr />
-            </div>
+          <div className="grid grid-cols-4 items-center place-items-center gap-2">
+          {booksRecomendados.map((todo:any) => (
+            <CardInfosBooks
+              key={todo.id}
+              altBook={todo.volumeInfo.title}
+              titleBook={todo.volumeInfo.title.length > 20 ? `${todo.volumeInfo.title.substring(0, 20)}...` : todo.volumeInfo.title}
+              descripBook={todo.volumeInfo.description?.length > 35 ? `${todo.volumeInfo.description.substring(0, 35)}...` : `Acesse o card para mais informações...`}
+              urlBook={todo.volumeInfo.imageLinks?.smallThumbnail === undefined ? todo.volumeInfo.imageLinks?.thumbnail : todo.volumeInfo.imageLinks?.smallThumbnail}
+              authorBook={todo.volumeInfo.authors?.length > 1 ? todo.volumeInfo.authors[0] : todo.volumeInfo.authors}
+            />
           ))}
-          </div>
-          
+          </div>          
         </section>
 
-        <section>
-          a definir...
-        </section>
       </div>
 
     </Container>
