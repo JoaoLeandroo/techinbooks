@@ -24,7 +24,7 @@ export default async function Home() {
                 className="rounded-md"
               />
             <div className="flex md:items-start items-center justify-center px-7 flex-col absolute top-0 w-full h-full">
-              <h1 className="text-neutral-200 drop-shadow-lg font-bold md:text-7xl text-5xl">Tech In Books</h1>
+              <h1 className="text-neutral-200 drop-shadow-lg font-bold md:text-7xl text-3xl">Tech In Books</h1>
               <p className="text-neutral-200 drop-shadow-lg font-semibold text-md">Aqui é o melhor lugar do mundo!</p>
             </div>
             </figure>
@@ -37,7 +37,7 @@ export default async function Home() {
             <h1 className="text-2xl font-semibold drop-shadow text-zinc-700 capitalize">Livros recomendados</h1>
           </div>
 
-          <div className="grid grid-cols-4 items-center place-items-center gap-2">
+          <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 items-center place-items-center gap-3 overflow-y-hidden">
           {booksRecomendados.map((todo:any) => (
             <CardInfosBooks
               key={todo.id}
