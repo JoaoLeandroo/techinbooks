@@ -1,6 +1,7 @@
-import { Search } from "lucide-react";
+import { CircleUser, Search } from "lucide-react";
 import Container from "./Container";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
 import ButtonCategories from "./ButtonCategories";
 
 const HeaderBar = () => {
@@ -14,13 +15,19 @@ const HeaderBar = () => {
 
           <div className="relative">
             <Input
-              className="md:w-[600px] sm:w-[450px] w-[300px] bg-slate-300"
-              placeholder="Digite aqui o nome do livro desejado!"
+              className="md:w-[600px] sm:w-[450px] w-[250px] bg-slate-300"
+              placeholder="Procure aqui"
             />
-            <Search size={20} className="absolute top-2 right-2" />
+            <Link href={"/"}>
+              <Search size={20} className="absolute top-2 right-2 cursor-pointer transition duration-200 hover:scale-110" />
+            </Link>
           </div>
 
-          <div>user</div>
+          <div>
+            <Link href={"/"}>
+              <CircleUser size={30} className="transition duration-200 hover:scale-105 hover:opacity-75"/>
+            </Link>
+          </div>
         </header>
       </Container>
     </div>
