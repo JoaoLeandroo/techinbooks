@@ -28,7 +28,7 @@ const CardInfosBooks = ({
     <>
       <Dialog>
         <DialogTrigger>
-          <div className="mb-2 mt-4 bg-zinc-100 hover:scale-110 transition duration-200 w-[200px] h-[290px] p-2 rounded-lg shadow-lg">
+          <div className="mb-2 mt-4 bg-zinc-100 hover:scale-105 transition duration-200 w-[190px] h-[290px] p-2 rounded-lg shadow-lg">
             <span className="text-xs font-medium text-zinc-500 mb-2">
               {authorBook}
             </span>
@@ -68,14 +68,21 @@ const CardInfosBooks = ({
                   ? `${fullInfos[1].substring(0, 250)}...`
                   : fullInfos[1]}
               </p>
-              <Link
-                href={buyLink}
-                target="_blank"
-              >
-                <button className="w-full h-11 bg-green-400 mt-2 rounded-md text-white font-semibold hover:opacity-75 transition duration-200 shadow-xl">
+
+              {buyLink != undefined ? (
+                <Link
+                  href={buyLink != undefined ? buyLink : "/"}
+                  target="_blank"
+                >
+                  <button className="w-full h-11 bg-green-400 mt-2 rounded-md text-white font-semibold hover:opacity-75 transition duration-200 shadow-xl">
                     Compre Aqui
-                </button>
-              </Link>
+                  </button>
+                </Link>
+              ) : (
+                <p className="bg-red-500 p-2 uppercase text-center font-semibold rounded-lg shadow-xl">
+                  Livro Esgotado!
+                </p>
+              )}
             </div>
           </article>
         </DialogContent>

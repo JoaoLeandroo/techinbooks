@@ -24,20 +24,20 @@ export default async function Home() {
                 className="rounded-md"
               />
             <div className="flex md:items-start items-center justify-center px-7 flex-col absolute top-0 w-full h-full">
-              <h1 className="text-neutral-200 drop-shadow-lg font-bold md:text-7xl text-3xl">Tech In Books</h1>
-              <p className="text-neutral-200 drop-shadow-lg font-semibold text-md">Aqui é o melhor lugar do mundo!</p>
+              <h1 className="text-neutral-200 drop-shadow-lg font-bold md:text-7xl text-4xl">Tech In Books</h1>
+              <p className="text-neutral-200 drop-shadow-lg font-semibold text-md rounded-lg bg-zinc-700/80 py-1 px-2">Aqui é o melhor lugar do mundo!</p>
             </div>
             </figure>
 
           </div>
         </section>
 
-        <section className="mt-10">
+        <section className="mt-10 border-b border-zinc-400">
           <div className="border-b border-zinc-400">
             <h1 className="text-2xl font-semibold drop-shadow text-zinc-700 capitalize">Livros recomendados</h1>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 items-center place-items-center gap-3 overflow-y-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 md:grid-cols-3 mb-2 items-center place-items-center gap-3 overflow-y-hidden">
           {booksRecomendados.map((todo:any) => (
             <CardInfosBooks
               key={todo.id}
@@ -47,7 +47,7 @@ export default async function Home() {
               urlBook={todo.volumeInfo.imageLinks?.smallThumbnail === undefined ? todo.volumeInfo.imageLinks?.thumbnail : todo.volumeInfo.imageLinks?.smallThumbnail}
               authorBook={todo.volumeInfo.authors?.length > 1 ? todo.volumeInfo.authors[0] : todo.volumeInfo.authors}
               fullInfos={[todo.volumeInfo.title, todo.volumeInfo.description]}
-              buyLink={todo.saleInfo.buyLink}
+              buyLink={todo.saleInfo?.buyLink}
             />
           ))}
           </div>          
