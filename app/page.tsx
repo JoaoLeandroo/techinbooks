@@ -5,7 +5,7 @@ import CardInfosBooks from "@/components/CardInfosBooks";
 
 export default async function Home() {
 
-  const data = await loadApiGoogleBooks("Livros recomendados + populares", 40)
+  const data = await loadApiGoogleBooks("Desenvolvimento de software", 25)
   const booksRecomendados = data.items
 
   return (
@@ -24,8 +24,8 @@ export default async function Home() {
                 className="rounded-md"
               />
             <div className="flex md:items-start items-center justify-center px-7 flex-col absolute top-0 w-full h-full">
-              <h1 className="text-neutral-200 drop-shadow-lg font-bold md:text-7xl text-4xl">Tech In Books</h1>
-              <p className="text-neutral-200 drop-shadow-lg font-semibold text-md rounded-lg bg-zinc-700/80 py-1 px-2">Aqui é o melhor lugar do mundo!</p>
+              <h1 className="text-neutral-200 drop-shadow-lg font-bold md:text-7xl text-4xl select-none">Tech In Books</h1>
+              <p className="text-neutral-200 drop-shadow-lg font-semibold text-md rounded-lg select-none bg-zinc-700/80 py-1 px-2">Aqui é o melhor lugar do mundo!</p>
             </div>
             </figure>
 

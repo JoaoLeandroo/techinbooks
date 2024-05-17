@@ -3,7 +3,7 @@ import CardInfosBooks from "@/components/CardInfosBooks";
 import Container from "@/components/Container";
 
 const AdventurePage = async () => {
-    const data = await loadApiGoogleBooks("Aventura", 40)
+    const data = await loadApiGoogleBooks("Javascript", 25)
     const adventureBooks = data.items 
 
 
@@ -13,7 +13,7 @@ const AdventurePage = async () => {
         <section className="mt-10">
           <div className="border-b border-zinc-400">
             <h1 className="text-2xl font-semibold drop-shadow text-zinc-700 capitalize">
-              Livros de Aventura
+              Livros de Javascript
             </h1>
           </div>
 

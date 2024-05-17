@@ -36,13 +36,7 @@ const ButtonCategories = () => {
           <ul className="flex flex-col gap-2">
           <LinkButtonClose hrefButton="/" nameCategorie="Home"/>
             <LinkButtonClose hrefButton="/categories/adventure" nameCategorie="Aventura"/>
-            <LinkButtonClose hrefButton="/categories/action" nameCategorie="Ação"/>
-            <LinkButtonClose hrefButton="/categories/romance" nameCategorie="Romance"/>
-            <LinkButtonClose hrefButton="/categories/drama" nameCategorie="Drama"/>
-            <LinkButtonClose hrefButton="/categories/fiction" nameCategorie="Ficção"/>
-            <LinkButtonClose hrefButton="/categories/classics" nameCategorie="Classicos"/>
-            <LinkButtonClose hrefButton="/categories/children" nameCategorie="Infantil"/>
-            <LinkButtonClose hrefButton="/categories/news" nameCategorie="Novos"/>
+            <LinkButtonClose hrefButton="/categories/javascript" nameCategorie="Javascript"/>
           </ul>
         </SheetContent>
       </Sheet>
