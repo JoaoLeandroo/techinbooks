@@ -34,7 +34,7 @@ export default async function Home() {
 
         <section className="mt-10 border-b border-zinc-400">
           <div className="border-b border-zinc-400">
-            <h1 className="text-2xl font-semibold drop-shadow text-zinc-700 capitalize">Livros recomendados</h1>
+            <h1 className="text-2xl font-semibold drop-shadow text-white capitalize">Livros recomendados</h1>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 md:grid-cols-3 mb-2 items-center place-items-center gap-3 overflow-y-hidden">

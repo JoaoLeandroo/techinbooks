@@ -28,14 +28,13 @@ const ButtonCategories = () => {
       <Sheet>
         <SheetTrigger>
           <AlignJustify
-            size={30}
-            className="cursor-pointer hover:opacity-75 transition duration-200"
+            size={35}
+            className="cursor-pointer hover:opacity-75 transition duration-200 text-white"
           />
         </SheetTrigger>
         <SheetContent>
           <ul className="flex flex-col gap-2">
           <LinkButtonClose hrefButton="/" nameCategorie="Home"/>
-            <LinkButtonClose hrefButton="/categories/adventure" nameCategorie="Aventura"/>
             <LinkButtonClose hrefButton="/categories/javascript" nameCategorie="Javascript"/>
           </ul>
         </SheetContent>

@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={font.className}>
+      <body className={`${font.className} bg-gradient-to-r from-neutral-900 to-cyan-500`}>
         <UserProvider>
             <div className="min-h-screen flex flex-col">
               <HeaderBar/>

@@ -1,7 +1,7 @@
 import { loadApiGoogleBooks } from "@/app/api/service";
 import CardInfosBooks from "@/components/CardInfosBooks";
 import Container from "@/components/Container";
-
+import Image from "next/image";
 const AdventurePage = async () => {
     const data = await loadApiGoogleBooks("Javascript", 25)
     const adventureBooks = data.items 
@@ -9,7 +9,7 @@ const AdventurePage = async () => {
 
   return (
     <Container>
-      <div className="w-full flex flex-col">
+      <div className="w-full flex flex-col relative">
         <section className="mt-10">
           <div className="border-b border-zinc-400">
             <h1 className="text-2xl font-semibold drop-shadow text-zinc-700 capitalize">

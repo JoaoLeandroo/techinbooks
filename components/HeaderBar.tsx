@@ -24,7 +24,7 @@ const HeaderBar = () => {
   }, [inputValue])
   
   return (
-    <div className="border-b border-zinc-400 bg-zinc-200 shadow-lg sticky top-0 z-50">
+    <div className="border-b border-white bg-zinc-200/20 shadow-lg sticky top-0 z-50">
       <Container>
         <header className="h-16 w-full flex justify-between items-center">
           <div>
