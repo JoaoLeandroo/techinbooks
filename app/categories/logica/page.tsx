@@ -2,8 +2,8 @@ import { loadApiGoogleBooks } from "@/app/api/service";
 import CardInfosBooks from "@/components/CardInfosBooks";
 import Container from "@/components/Container";
 
-const JavascriptPage = async () => {
-    const data = await loadApiGoogleBooks("Javascript", 25)
+const LogicaPage = async () => {
+    const data = await loadApiGoogleBooks("Lógica de programação", 25)
     const adventureBooks = data.items 
 
 
@@ -13,7 +13,7 @@ const JavascriptPage = async () => {
         <section className="mt-10">
           <div className="border-b border-zinc-400">
             <h1 className="text-2xl font-semibold drop-shadow text-white capitalize">
-              Livros de Javascript
+              Livros sobre Lógica de programação
             </h1>
           </div>
 
@@ -37,4 +37,4 @@ const JavascriptPage = async () => {
   );
 };
 
-export default JavascriptPage;
+export default LogicaPage;

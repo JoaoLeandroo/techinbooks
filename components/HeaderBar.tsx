@@ -1,10 +1,11 @@
 "use client"
-import { CircleUser, Search } from "lucide-react";
+import Image from "next/image";
+import { Search } from "lucide-react";
 import Container from "./Container";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import ButtonCategories from "./ButtonCategories";
-import { useEffect, useRef, useContext, useState } from "react";
+import { useEffect, useRef, useContext } from "react";
 import { UserContext } from "@/context/auth";
 
 
@@ -27,13 +28,13 @@ const HeaderBar = () => {
     <div className="border-b border-white bg-zinc-200/20 shadow-lg sticky top-0 z-50">
       <Container>
         <header className="h-16 w-full flex justify-between items-center">
-          <div>
-            <ButtonCategories />
-          </div>
-
+        <Link href={"/"} title="Tech Books">
+            <h1 className="text-green-500 font-bold text-2xl transition duration-200 hover:opacity-75">Tech<span className="text-white">Books</span></h1>
+          </Link>
+          
           <div className="relative">
             <Input
-              className="md:w-[600px] sm:w-[450px] w-[250px] bg-slate-300"
+              className="md:w-[600px] sm:w-[450px] w-[250px] bg-slate-300 border-2 border-white outline-none"
               placeholder="Procure aqui..."
               ref={inputRef}
             />
@@ -43,10 +44,9 @@ const HeaderBar = () => {
           </div>
 
           <div>
-            <div>
-              <CircleUser size={30} className="transition duration-200 hover:scale-105 hover:opacity-75"/>
-            </div>
+            <ButtonCategories />
           </div>
+        
         </header>
       </Container>
     </div>

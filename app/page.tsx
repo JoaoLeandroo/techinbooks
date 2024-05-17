@@ -24,8 +24,8 @@ export default async function Home() {
                 className="rounded-md"
               />
             <div className="flex md:items-start items-center justify-center px-7 flex-col absolute top-0 w-full h-full">
-              <h1 className="text-neutral-200 drop-shadow-lg font-bold md:text-7xl text-4xl select-none">Tech In Books</h1>
-              <p className="text-neutral-200 drop-shadow-lg font-semibold text-md rounded-lg select-none bg-zinc-700/80 py-1 px-2">Aqui é o melhor lugar do mundo!</p>
+              <h1 className="text-green-500 drop-shadow-lg font-bold md:text-7xl text-4xl select-none">Tech <span className="text-white">Books</span></h1>
+              <p className="text-green-500 drop-shadow-lg font-bold text-md rounded-lg select-none bg-white py-1 px-2">Aqui é o melhor lugar do mundo!</p>
             </div>
             </figure>
 
@@ -37,7 +37,7 @@ export default async function Home() {
             <h1 className="text-2xl font-semibold drop-shadow text-white capitalize">Livros recomendados</h1>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 md:grid-cols-3 mb-2 items-center place-items-center gap-3 overflow-y-hidden">
+          <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 mb-2 items-center place-items-center gap-3 overflow-y-hidden">
           {booksRecomendados.map((todo:any) => (
             <CardInfosBooks
               key={todo.id}

@@ -28,7 +28,7 @@ const CardInfosBooks = ({
     <>
       <Dialog>
         <DialogTrigger>
-          <div className="mb-2 mt-4 border border-slate-300 bg-neutral-400/20 hover:scale-105 transition duration-200 w-[190px] h-[290px] p-2 rounded-lg shadow-lg">
+          <div className="mb-2 mt-4 border border-slate-300 bg-neutral-400/20 hover:scale-105 transition duration-200 w-[150px] sm:w-[190px] h-[290px] p-2 rounded-lg shadow-lg">
             <span className="text-xs font-medium text-white mb-2">
               {authorBook}
             </span>
