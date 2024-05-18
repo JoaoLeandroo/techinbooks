@@ -3,7 +3,7 @@ import CardInfosBooks from "@/components/CardInfosBooks";
 import Container from "@/components/Container";
 
 const SofwarePage = async () => {
-    const data = await loadApiGoogleBooks("Desenvolvimento de software", 40)
+    const data = await loadApiGoogleBooks("Desenvolvimento de software", 25)
     const adventureBooks = data.items 
 
 

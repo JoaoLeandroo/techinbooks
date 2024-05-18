@@ -3,7 +3,7 @@ import CardInfosBooks from "@/components/CardInfosBooks";
 import Container from "@/components/Container";
 
 const LogicaPage = async () => {
-    const data = await loadApiGoogleBooks("Lógica de programação, entendendo algoritmos", 40)
+    const data = await loadApiGoogleBooks("Lógica de programação, entendendo algoritmos", 25)
     const adventureBooks = data.items 
 
 

@@ -3,7 +3,7 @@ import CardInfosBooks from "@/components/CardInfosBooks";
 import Container from "@/components/Container";
 
 const JavaPage = async () => {
-    const data = await loadApiGoogleBooks("Banco de dados, Mysql, postgres, oracle", 40)
+    const data = await loadApiGoogleBooks("Banco de dados, Mysql, postgres, oracle", 25)
     const adventureBooks = data.items 
 
 
