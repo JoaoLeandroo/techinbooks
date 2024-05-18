@@ -3,7 +3,7 @@ import CardInfosBooks from "@/components/CardInfosBooks";
 import Container from "@/components/Container";
 
 const JavaPage = async () => {
-    const data = await loadApiGoogleBooks("Java, orientado a objeto", 25)
+    const data = await loadApiGoogleBooks("Java, orientado a objeto", 40)
     const adventureBooks = data.items 
 
 

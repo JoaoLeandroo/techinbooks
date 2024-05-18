@@ -2,7 +2,7 @@ import { loadApiGoogleBooks } from "@/app/api/service";
 import CardInfosBooks from "@/components/CardInfosBooks";
 import Container from "@/components/Container";
 
-const outhersPage = async () => {
+const OthersPage = async () => {
     const data = await loadApiGoogleBooks("PHP, C#, Ruby on rails, Rust", 25)
     const adventureBooks = data.items 
 
@@ -13,7 +13,7 @@ const outhersPage = async () => {
         <section className="mt-10">
           <div className="border-b border-zinc-400">
             <h1 className="text-2xl font-semibold drop-shadow text-white capitalize">
-              Livros de Java
+              Outros livros
             </h1>
           </div>
 
@@ -37,4 +37,4 @@ const outhersPage = async () => {
   );
 };
 
-export default outhersPage;
+export default OthersPage;
