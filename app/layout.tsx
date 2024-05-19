@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import HeaderBar from "@/components/HeaderBar";
 import FooterBar from "@/components/FooterBar";
+import AuthProvider from "@/context/auth";
 
 const font = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "700", "900"] });
 
@@ -19,11 +20,13 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${font.className} bg-gradient-to-r from-neutral-900 to-cyan-500`}>
+        <AuthProvider>
             <div className="min-h-screen flex flex-col">
               <HeaderBar/>
               <main className="flex-grow">{children}</main>
               <FooterBar/>
             </div>
+        </AuthProvider>
       </body>
     </html>
   );

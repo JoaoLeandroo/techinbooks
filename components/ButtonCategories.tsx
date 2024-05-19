@@ -29,7 +29,7 @@ const ButtonCategories = () => {
         <SheetTrigger>
           <AlignJustify
             size={35}
-            className="cursor-pointer hover:opacity-75 transition duration-200 text-white"
+            className="cursor-pointer hover:opacity-75 mt-2 transition duration-200 text-white"
           />
         </SheetTrigger>
         <SheetContent className="bg-cyan-950">
