@@ -23,6 +23,7 @@ const HeaderBar = () => {
   const router = useRouter()
   const keyDownEnter = (e: any) => {
     if (e.key === 'Enter') {
+      if(inputChange === "") return
       setInputValue(inputChange)
       setInputChange("")
       router.push("/categories/search")
